@@ -1,0 +1,16 @@
+PODS:
+  - WeatherCore (0.0.2)
+
+DEPENDENCIES:
+  - WeatherCore (= 0.0.2)
+
+SPEC REPOS:
+  trunk:
+    - WeatherCore
+
+SPEC CHECKSUMS:
+  WeatherCore: e33d2f1c5a6da48671c05b602865c30e62b259ad
+
+PODFILE CHECKSUM: 6d87920a0c31deead0bb813d55176f57b2a89f82
+
+COCOAPODS: 1.8.4

@@ -1,0 +1,6 @@
+framework module WeatherCore {
+  umbrella header "WeatherCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
