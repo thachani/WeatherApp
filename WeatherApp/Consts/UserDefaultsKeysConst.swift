@@ -12,6 +12,6 @@ enum UserDefaultsKeysConst {
 
     //MARK: - Towns
 
-    static let TownsKey = "TownsKey__weatherApp"
+    static let TownsKey = "TownsKey__weatherApp__"
 
 }

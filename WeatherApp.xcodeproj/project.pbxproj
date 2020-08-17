@@ -19,6 +19,8 @@
 		DC1A514224E9EE7C000020C2 /* UserDefaultsKeysConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1A514124E9EE7C000020C2 /* UserDefaultsKeysConst.swift */; };
 		DC1A514824E9F39D000020C2 /* TownInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1A514724E9F39D000020C2 /* TownInterfaces.swift */; };
 		DC1A514A24E9F626000020C2 /* TownsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1A514924E9F626000020C2 /* TownsListViewModel.swift */; };
+		DCCD210724EA112A0097D3CC /* AddTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD210624EA112A0097D3CC /* AddTownViewController.swift */; };
+		DCCD210924EA180D0097D3CC /* AddTownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD210824EA180D0097D3CC /* AddTownViewModel.swift */; };
 		DCD7AE4724EA08A5001115FD /* TownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7AE4524EA08A5001115FD /* TownCell.swift */; };
 		DCD7AE4824EA08A5001115FD /* TownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD7AE4624EA08A5001115FD /* TownCell.xib */; };
 		F851B42C8778C7C4B98378D1 /* Pods_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A10074AE1BBC49F636040D /* Pods_WeatherAppTests.framework */; };
@@ -56,6 +58,8 @@
 		DC1A514124E9EE7C000020C2 /* UserDefaultsKeysConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeysConst.swift; sourceTree = "<group>"; };
 		DC1A514724E9F39D000020C2 /* TownInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownInterfaces.swift; sourceTree = "<group>"; };
 		DC1A514924E9F626000020C2 /* TownsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsListViewModel.swift; sourceTree = "<group>"; };
+		DCCD210624EA112A0097D3CC /* AddTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTownViewController.swift; sourceTree = "<group>"; };
+		DCCD210824EA180D0097D3CC /* AddTownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTownViewModel.swift; sourceTree = "<group>"; };
 		DCD7AE4524EA08A5001115FD /* TownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownCell.swift; sourceTree = "<group>"; };
 		DCD7AE4624EA08A5001115FD /* TownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TownCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +154,7 @@
 				DC1A514324E9F2C4000020C2 /* TownTableViewCells */,
 				DC1A513824E9EAAF000020C2 /* ViewModels */,
 				DC1A511824E9D96A000020C2 /* TownsListViewController.swift */,
+				DCCD210624EA112A0097D3CC /* AddTownViewController.swift */,
 			);
 			path = Towns;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				DC1A513924E9EAC3000020C2 /* Town.swift */,
 				DC1A514924E9F626000020C2 /* TownsListViewModel.swift */,
+				DCCD210824EA180D0097D3CC /* AddTownViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -380,7 +386,9 @@
 				DC1A511524E9D96A000020C2 /* AppDelegate.swift in Sources */,
 				DC1A514224E9EE7C000020C2 /* UserDefaultsKeysConst.swift in Sources */,
 				DC1A513F24E9EE01000020C2 /* UserDefaults+Codable.swift in Sources */,
+				DCCD210724EA112A0097D3CC /* AddTownViewController.swift in Sources */,
 				DC1A514A24E9F626000020C2 /* TownsListViewModel.swift in Sources */,
+				DCCD210924EA180D0097D3CC /* AddTownViewModel.swift in Sources */,
 				DC1A514824E9F39D000020C2 /* TownInterfaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,9 +21,6 @@ class TownsListViewController: UIViewController {
 
         setupTableView()
         title = "TOWNS"
-        let test = Town(name: "test", latitude: 44, longitude: 2)
-
-        UserDefaults.standard.set(value: [test], forKey: UserDefaultsKeysConst.TownsKey)
     }
 
     func setupTableView() {
@@ -38,7 +35,15 @@ class TownsListViewController: UIViewController {
 
     }
 
-    @IBAction func addTownTapped(_ sender: Any) {}
+    @IBAction func addTownTapped(_ sender: Any) {
+        guard let addTownVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTownViewControllerStrId") as? AddTownViewController else {
+            fatalError("Cannot instantiate AddTownViewController ")
+        }
+
+        addTownVC.delegate = self
+        navigationController?.pushViewController(addTownVC, animated: true)
+
+    }
 }
 
 extension TownsListViewController: UITableViewDataSource {
@@ -59,6 +64,21 @@ extension TownsListViewController: UITableViewDataSource {
         cell.configure(withTitle: title)
 
         return cell
+    }
+}
+
+extension TownsListViewController: AddTownViewControllerDelegate {
+    func didFinish() {
+        popAndUpdate()
+    }
+
+    func didCancel() {
+        popAndUpdate()
+    }
+
+    private func popAndUpdate() {
+        navigationController?.popViewController(animated: true)
+        tableView.reloadData()
     }
 }
 

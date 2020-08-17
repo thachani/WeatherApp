@@ -24,6 +24,36 @@
             </objects>
             <point key="canvasLocation" x="-1376" y="-114"/>
         </scene>
+        <!--Add Town View Controller-->
+        <scene sceneID="Q2I-Hn-dSV">
+            <objects>
+                <viewController storyboardIdentifier="AddTownViewControllerStrId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7JT-Oj-R6E" customClass="AddTownViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HKI-aY-14J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter a Town" id="JHf-Pt-YKA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7JT-Oj-R6E" id="mih-gU-Qdg"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Woj-aG-Ans"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z4c-rf-Ehl"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="searchBar" destination="JHf-Pt-YKA" id="T2U-Ry-vvE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ob8-zW-zdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-635" y="431"/>
+        </scene>
         <!--Towns List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
