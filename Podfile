@@ -6,7 +6,7 @@ target 'WeatherApp' do
   use_frameworks!
 
   # Pods for WeatherApp
-  pod 'WeatherCore', '0.0.2'
+  pod 'WeatherCore', '0.0.3'
   
   target 'WeatherAppTests' do
     inherit! :search_paths

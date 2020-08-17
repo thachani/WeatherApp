@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct TownsListViewModel {
 
@@ -26,5 +27,10 @@ struct TownsListViewModel {
 
         let town = towns[index.row]
         return town.name
+    }
+
+    func getWeatherViewModel(forIndexPath index: IndexPath) -> WeatherViewModel {
+        let town = towns[index.row]
+        return WeatherViewModel(town: town)
     }
 }

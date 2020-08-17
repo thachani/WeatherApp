@@ -67,6 +67,30 @@ extension TownsListViewController: UITableViewDataSource {
     }
 }
 
+extension TownsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let weatherVM = viewModel.getWeatherViewModel(forIndexPath: indexPath)
+
+//MARK: - inject dependencies with storyboard instance is available only for ios13
+        
+        if #available(iOS 13.0, *) {
+            let weatherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "WeatherViewControllerStrId", creator: { coder in
+                return WeatherViewController(coder: coder, viewModel: weatherVM)
+            })
+            navigationController?.pushViewController(weatherVC, animated: true)
+
+        } else {
+            guard let weatherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WeatherViewControllerStrId") as? WeatherViewController else {
+                fatalError("Cannot instantiate WeatherViewController ")
+            }
+            weatherVC.viewModel = weatherVM
+            navigationController?.pushViewController(weatherVC, animated: true)
+        }
+
+
+    }
+}
+
 extension TownsListViewController: AddTownViewControllerDelegate {
     func didFinish() {
         popAndUpdate()
