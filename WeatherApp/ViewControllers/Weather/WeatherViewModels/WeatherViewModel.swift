@@ -80,7 +80,70 @@ class WeatherViewModel {
                 completion()
             }
         }
+    }
+    
+    //MARK: - daily
+    
+    func numberOfRow(forSection section: Int) -> Int {
+        return weather?.daily.count ?? 0
+    }
+    
+    func dailyWeatherDayForCell(atIndex index: IndexPath) -> String {
+        guard let daily = weather?.daily, daily.count > index.row else {
+            return ""
+        }
+        
+        let day = daily[index.row]
+        dateFormatter.dateFormat = "EEEE"
+        
+        return dateFormatter.string(from: day.time)
+    }
+    
+    func dailyWeatherDateForCell(atIndex index: IndexPath) -> String {
+        guard let daily = weather?.daily, daily.count > index.row else {
+            return ""
+        }
+        
+        let day = daily[index.row]
+        dateFormatter.dateFormat = "MMMM d"
+        
+        return dateFormatter.string(from: day.time)
+    }
+    
+    func dailyWeatherTempForCell(atIndex index: IndexPath) -> String {
+        guard let daily = weather?.daily, daily.count > index.row else {
+            return ""
+        }
+        
+        let day = daily[index.row]
+        
+        return String(format: "Min %.1f °K - Max %.1f °K", day.temp.min, day.temp.max)
         
     }
+    
+    func dailyWeatherWindSpeedForCell(atIndex index: IndexPath) -> String {
+        guard let daily = weather?.daily, daily.count > index.row else {
+            return ""
+        }
+        
+        let day = daily[index.row]
+        
+        return String(format: "%.f MPS", day.windSpeed)
+    }
+    
+    func dailyWeatherIconForCell(atIndex index: IndexPath) -> UIImage? {
+        guard let daily = weather?.daily, daily.count > index.row else {
+            return nil
+        }
+        
+        let day = daily[index.row]
+        
+        guard let imageNamed = day.weatherSummary.first?.icon  else {
+            return nil
+        }
+        
+        return UIImage(named: imageNamed)
+    }
+    
     
 }

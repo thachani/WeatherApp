@@ -20,6 +20,10 @@ struct TownsListViewModel {
         return towns
     }
 
+    func numberOfRow(forSection section: Int) -> Int {
+        return towns.count
+    }
+
     func titleForCell(atIndex index: IndexPath) -> String {
         guard towns.count > index.row else {
             return ""
